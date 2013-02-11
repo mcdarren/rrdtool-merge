@@ -58,7 +58,8 @@ sub rra
 	print "Start processing Round Robin DB\n";
 	my $cf          = $new_rra->first_child( 'cf' )->text;
 	my $pdp_per_row = $new_rra->first_child( 'pdp_per_row' )->text;
-	my $xff         = $new_rra->first_child( 'xff' )->text;
+	my $params      = $new_rra->first_child( 'params' )
+	my $xff         = $params->first_child( 'xff' )->text;
 
 	print "  CF         : $cf\n";
 	print "  Pdp x Row  : $pdp_per_row\n";
